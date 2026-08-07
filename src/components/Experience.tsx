@@ -25,7 +25,7 @@ export default function Experience() {
               />
 
               <p className="font-mono text-xs tracking-widest text-faint uppercase">
-                {item.start} — {item.end}
+                {item.end ? `${item.start} — ${item.end}` : item.start}
                 {item.duration && <span className="text-muted"> · {item.duration}</span>}
               </p>
               <h3 className="mt-2 text-xl font-semibold tracking-tight text-text">{item.role}</h3>

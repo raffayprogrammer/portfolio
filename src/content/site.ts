@@ -31,8 +31,8 @@ export type ExperienceItem = {
   role: string;
   org: string;
   start: string;
-  /** Use "Present" for a current role. */
-  end: string;
+  /** Omit for an ongoing role — only the start year renders. */
+  end?: string;
   /** Optional length of tenure, e.g. "1.5 yrs". Shown after the date range. */
   duration?: string;
   points: string[];
@@ -245,7 +245,6 @@ export const experience: ExperienceItem[] = [
     role: "Data Engineering",
     org: "Alfa Analytics",
     start: "2026",
-    end: "Present",
     duration: "5 mos",
     points: [
       "Built ingestion and transformation pipelines feeding BigQuery from multiple upstream sources.",
@@ -257,7 +256,6 @@ export const experience: ExperienceItem[] = [
     role: "Automation Engineering",
     org: "Zirium AI",
     start: "2025",
-    end: "Present",
     duration: "1.5 yrs",
     points: [
       "Designed and maintained workflow automations integrating third-party APIs, CRMs and internal databases.",
