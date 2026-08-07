@@ -11,13 +11,6 @@ npm run build   # production build
 npm run lint
 ```
 
-> **Note on npm:** this machine's npm cache defaults to `D:\npm-cache`, and D: is
-> nearly full. If an install fails with `ENOSPC`, run it with the cache redirected:
->
-> ```powershell
-> $env:npm_config_cache = "C:\npm-cache"; npm install
-> ```
-
 ## Editing the content
 
 **Everything you'll want to change lives in one file: [`src/content/site.ts`](src/content/site.ts).**
