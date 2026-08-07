@@ -44,8 +44,6 @@ export const site = {
   /** One line under your name in the hero. Keep it to ~12 words. */
   tagline:
     "I connect APIs, cloud services and databases into pipelines that run without supervision — then turn what they produce into dashboards people decide from.",
-  /** TODO: confirm — shown in the hero badge. Set "" to show just "Available for work". */
-  location: "Remote",
   seo: {
     title: "Raffay Noor — Data Scientist",
     description:
@@ -53,8 +51,6 @@ export const site = {
     /** TODO: set this to your real domain once deployed. */
     url: "https://example.com",
   },
-  /** TODO: drop your CV at public/resume.pdf, or set to "" to hide the button. */
-  resumeUrl: "/resume.pdf",
   email: "abdulraffaynoor1122@gmail.com",
   /** TODO: add GitHub / LinkedIn here — they weren't on your CV.
    *  { label: "GitHub", href: "https://github.com/yourhandle" },

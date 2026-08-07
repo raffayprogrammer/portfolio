@@ -57,25 +57,6 @@ export function ArrowUpRightIcon({ className = "h-4 w-4" }: IconProps) {
   );
 }
 
-export function DownloadIcon({ className = "h-4 w-4" }: IconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.8"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      className={className}
-    >
-      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-      <path d="M7 10l5 5 5-5" />
-      <path d="M12 15V3" />
-    </svg>
-  );
-}
-
 export function MenuIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg

@@ -49,7 +49,7 @@ export default function Nav() {
           className="font-mono text-sm font-medium tracking-tight text-text transition-colors hover:text-accent"
         >
           <span className="text-primary">/</span>
-          {site.name.split(" ")[0].toLowerCase()}
+          {site.name.split(" ")[0]}
         </a>
 
         {/* Desktop */}

@@ -18,10 +18,9 @@ You should not need to open a component to update the site.
 
 | What | Where in `site.ts` |
 | --- | --- |
-| Name, role, tagline, location | `site` |
+| Name, role, tagline | `site` |
 | Email, GitHub, LinkedIn | `site.socials`, `site.email` |
 | Page title / meta description / URL | `site.seo` |
-| Résumé button | `site.resumeUrl` — set `""` to hide it |
 | The three numbers under the hero | `stats` |
 | About paragraphs | `about.paragraphs` |
 | Projects | `projects` |
@@ -36,11 +35,6 @@ Each project takes:
   paragraph. Keep this to **two** projects so the top row fills evenly.
 - `href` → live URL or repo. Leave `""` and the card renders without a link.
 - `metrics` → the small cyan stat chips. Keep them concrete and true. Empty array is fine.
-
-### Résumé
-
-Drop your PDF at `public/resume.pdf` and the hero button will serve it. Or point
-`site.resumeUrl` at a Google Drive link instead.
 
 ## Design system
 
