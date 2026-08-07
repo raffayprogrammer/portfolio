@@ -63,7 +63,7 @@ export const site = {
 export const stats: Stat[] = [
   { value: "2+ yrs", label: "Building automation systems" },
   { value: "390K+", label: "Rows ingested in one pipeline" },
-  { value: "6", label: "Systems shipped end to end" },
+  { value: "50+", label: "Automations built across projects" },
 ];
 
 export const about = {
