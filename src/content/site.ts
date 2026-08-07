@@ -33,6 +33,8 @@ export type ExperienceItem = {
   start: string;
   /** Use "Present" for a current role. */
   end: string;
+  /** Optional length of tenure, e.g. "1.5 yrs". Shown after the date range. */
+  duration?: string;
   points: string[];
 };
 
@@ -239,15 +241,16 @@ export const skillGroups: SkillGroup[] = [
 
 /**
  * Newest first.
- * TODO: your CV gives durations ("2+ years", "6 months") but not dates —
- * I derived these from today. Correct the years if they're off.
+ * Start years are derived from the stated tenure (5 mos → early 2026,
+ * 1.5 yrs → early 2025). Change `start`/`end` if the real dates differ.
  */
 export const experience: ExperienceItem[] = [
   {
     role: "Data Engineering",
-    org: "Freelance / Contract",
+    org: "Alfa Analytics",
     start: "2026",
     end: "Present",
+    duration: "5 mos",
     points: [
       "Built ingestion and transformation pipelines feeding BigQuery from multiple upstream sources.",
       "Modelled data for analytical querying and connected it to Tableau and Power BI reporting layers.",
@@ -256,9 +259,10 @@ export const experience: ExperienceItem[] = [
   },
   {
     role: "Automation Engineering",
-    org: "Freelance / Contract",
-    start: "2024",
+    org: "Zirium AI",
+    start: "2025",
     end: "Present",
+    duration: "1.5 yrs",
     points: [
       "Designed and maintained workflow automations integrating third-party APIs, CRMs and internal databases.",
       "Built webhook-driven pipelines handling scheduling, lead capture and notification delivery.",
