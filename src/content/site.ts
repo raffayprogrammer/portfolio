@@ -242,6 +242,27 @@ export const skillGroups: SkillGroup[] = [
  */
 export const experience: ExperienceItem[] = [
   {
+    role: "Automation & CRM Specialist",
+    org: "Zaptics",
+    start: "Aug 2026",
+    duration: "Project based",
+    points: [
+      "Build CRM and workflow automations in Make.com and n8n on a project basis — lead routing, pipeline-stage triggers and record syncs between systems.",
+      "Connect CRM records to downstream tools through webhooks and scheduled jobs so a status change in one place propagates everywhere without re-entry.",
+    ],
+  },
+  {
+    role: "AI Automation Engineer",
+    org: "Golden Carthage · Tunisia (Remote)",
+    // TODO: no start/end given — only "6 months". Set real months if known.
+    start: "2026",
+    duration: "6 mos · Project based",
+    points: [
+      "Designed and delivered AI-driven automation workflows over a six-month project engagement, fully remote with a Tunisia-based team.",
+      "Embedded LLM steps inside n8n pipelines and wired them to existing business tools through REST APIs and webhooks.",
+    ],
+  },
+  {
     role: "Data Engineering",
     org: "Alfa Analytics",
     start: "2026",
