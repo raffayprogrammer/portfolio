@@ -33,7 +33,7 @@ export default function Hero() {
 
         {/* Stats strip */}
         <Reveal delay={240}>
-          <dl className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-3">
+          <dl className="mt-20 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-line bg-line sm:grid-cols-2">
             {/* col-reverse: the number reads above its label while dt stays first in the DOM */}
             {stats.map((stat) => (
               <div key={stat.label} className="flex flex-col-reverse gap-1 bg-bg px-6 py-7">

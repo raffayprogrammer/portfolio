@@ -62,7 +62,6 @@ export const site = {
 /** Small numbers under the hero. Every one of these is backed by the CV. */
 export const stats: Stat[] = [
   { value: "2+ yrs", label: "Building automation systems" },
-  { value: "390K+", label: "Rows ingested in one pipeline" },
   { value: "50+", label: "Automations built across projects" },
 ];
 
