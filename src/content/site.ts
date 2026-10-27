@@ -61,14 +61,14 @@ export const site = {
 
 /** Small numbers under the hero. Every one of these is backed by the CV. */
 export const stats: Stat[] = [
-  { value: "2+ yrs", label: "Building automation systems" },
+  { value: "4+ yrs", label: "Building automation systems" },
   { value: "50+", label: "Automations built across projects" },
 ];
 
 export const about = {
   /** Each string renders as its own paragraph. */
   paragraphs: [
-    "I'm a data scientist with over two years building automation systems and six months in data engineering. My work sits where APIs, cloud services and databases meet — pipelines that run unattended, with error handling and alerting, feeding reporting layers people actually make decisions from.",
+    "I'm a data scientist with over four years building automation systems and data pipelines. My work sits where APIs, cloud services and databases meet — pipelines that run unattended, with error handling and alerting, feeding reporting layers people actually make decisions from.",
     "Recent work has been applied AI: retrieval systems, speech models, and self-hosted language models wired into real business workflows. A voice agent running entirely on local hardware. An outreach pipeline where a self-hosted model writes every email.",
     "The part I find most interesting is the failure that doesn't announce itself. A video-listing API that silently omits valid videos. A pagination fault that drops rows past 10,000 with no error. An unfiltered record lookup quietly fanning writes across unrelated client records. Most of my best work has been finding those and designing around them.",
   ],
