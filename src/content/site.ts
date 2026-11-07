@@ -122,6 +122,21 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Multi-Agent Coding Orchestrator",
+    period: "2026",
+    summary:
+      "Desktop app running a staged multi-agent coding pipeline on a self-hosted GPU workstation — 13 agents with defined roles carrying a task from design through code, QA, security review and UAT to a pull request.",
+    detail:
+      "Agents never chat freely: a Lead orchestrator delegates sequentially through gates, QA and Security run in parallel, and only the Coder writes code while only the GitHub agent holds a token — every other agent is read-only and files JSON reports to a shared job folder, with a three-round cap on fix loops. Roles live in config rather than code. Runs entirely on local Qwen3 models with per-agent quantisation chosen to fit 2×24 GB of VRAM, an allowlisted build/test/run tool gated behind human approval, and a live trace panel with a global stop.",
+    stack: ["Python", "FastAPI", "Electron", "React", "LM Studio", "Qwen3", "YAML"],
+    metrics: [
+      { value: "13", label: "agents" },
+      { value: "0", label: "cloud AI APIs" },
+    ],
+    href: "",
+    featured: false,
+  },
+  {
     title: "Vista Social Analytics Data Lake",
     period: "2026",
     summary:
@@ -216,6 +231,8 @@ export const skillGroups: SkillGroup[] = [
       "LLM integration",
       "Retrieval-augmented generation",
       "Vector databases",
+      "Multi-agent orchestration",
+      "Self-hosted LLMs",
       "Speech-to-text",
       "Text-to-speech",
     ],
