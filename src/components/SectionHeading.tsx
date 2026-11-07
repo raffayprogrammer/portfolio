@@ -1,23 +1,24 @@
 import Reveal from "./Reveal";
 
 type Props = {
-  /** Small mono label above the title, e.g. "01 / Work" */
+  /** Small mono label in the left column, e.g. "Selected work". */
   eyebrow: string;
   title: string;
   description?: string;
 };
 
+/**
+ * Swiss section head: the label holds column 1, the title and lede run
+ * across the rest. The asymmetry is the point — it is what keeps the page
+ * reading as an index rather than a stack of centred blocks.
+ */
 export default function SectionHeading({ eyebrow, title, description }: Props) {
   return (
-    <Reveal>
-      <div className="max-w-2xl">
-        <p className="font-mono text-xs tracking-widest text-accent uppercase">{eyebrow}</p>
-        <h2 className="mt-3 text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
-          {title}
-        </h2>
-        {description && (
-          <p className="mt-4 text-base leading-relaxed text-muted text-pretty">{description}</p>
-        )}
+    <Reveal className="shead">
+      <p className="label">{eyebrow}</p>
+      <div>
+        <h2>{title}</h2>
+        {description && <p className="lede">{description}</p>}
       </div>
     </Reveal>
   );

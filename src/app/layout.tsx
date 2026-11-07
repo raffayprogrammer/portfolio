@@ -1,18 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
+import { Familjen_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 import { site } from "@/content/site";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+/** Display face — a grotesk with Swiss bones and a little warmth. */
+const display = Familjen_Grotesk({
+  variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
+/** Every label, figure, date and tag on the site is set in this. */
+const mono = IBM_Plex_Mono({
   variable: "--font-mono-code",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -34,21 +37,22 @@ export const metadata: Metadata = {
   },
 };
 
+/** Matches --paper / --paper in the dark block, so the browser chrome
+ *  follows the page instead of flashing against it. */
 export const viewport: Viewport = {
-  themeColor: "#0a0a0f",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#f6f6f4" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f0f10" },
+  ],
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${mono.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-sans">
-        {/* Decorative layers — behind everything, never interactive */}
-        <div className="ambient" aria-hidden="true" />
-        <div className="grid-veil" aria-hidden="true" />
-
+    <html lang="en" className={`${display.variable} ${mono.variable}`}>
+      <body>
         <a
           href="#work"
-          className="sr-only rounded-lg bg-primary px-4 py-2 text-sm text-white focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:bg-accent focus:px-4 focus:py-2 focus:text-white"
         >
           Skip to content
         </a>
