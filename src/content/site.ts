@@ -208,6 +208,106 @@ export const projects: Project[] = [
   },
 ];
 
+export type Demo = {
+  title: string;
+  /** One or two sentences under the title. */
+  blurb: string;
+  tools: string[];
+  /** Files live in public/demos/ — <slug>.mp4 and <slug>.png (poster). */
+  slug: string;
+};
+
+/**
+ * Video walkthroughs, shown in order.
+ * To add one: drop <slug>.mp4 and <slug>.png into public/demos/ and append here.
+ */
+export const demos: Demo[] = [
+  {
+    title: "AI Lead Finder Chatbot",
+    blurb:
+      "Ask in plain English for a type of business in a city and a finished lead list comes back in the same chat. Searches Yelp, Google Maps and US directories at once, then visits each business's own site to fill in the phone number and email.",
+    tools: ["n8n", "AI agent", "Yelp", "Google Maps", "Web scraping"],
+    slug: "ai-lead-finder",
+  },
+  {
+    title: "CRM on Autopilot",
+    blurb:
+      "A 9 AM schedule that works the whole sales pipeline on its own — checks Gmail to see who replied, moves leads between stages and books follow-ups for the ones who didn't. Replaced the daily routine of a three-person team.",
+    tools: ["n8n", "CRM API", "Gmail"],
+    slug: "crm-autopilot",
+  },
+  {
+    title: "AI Voice Agent & Chatbot for a Private Clinic",
+    blurb:
+      "Patients call or type at any hour. The agent answers questions about treatments, checks the clinic's live calendar mid-conversation, books the slot if it's free and emails the confirmation.",
+    tools: ["Voice AI", "n8n", "OpenAI", "Google Calendar", "Gmail"],
+    slug: "clinic-voice-agent",
+  },
+  {
+    title: "Discord Data Bots",
+    blurb:
+      "Two bots for a data-heavy community: one walks the Google Sheet finding wrong rows and writing corrections back, the other answers plain-English questions about the data in Discord. It completes about 90% of the questions it's asked.",
+    tools: ["n8n", "Google Sheets", "Discord", "OpenAI"],
+    slug: "discord-data-bots",
+  },
+  {
+    title: "AI LinkedIn Content Engine",
+    blurb:
+      "Research, writing and carousel design run on a schedule — then the workflow stops and waits. Nothing publishes under the owner's name until they approve both the post and the slides.",
+    tools: ["n8n", "Apify", "OpenRouter", "Google Drive", "LinkedIn API"],
+    slug: "linkedin-content-engine",
+  },
+  {
+    title: "AI Music & Sports Content Generator",
+    blurb:
+      "Weekly workflow that scrapes and searches for trending music and sports stories, picks the ones worth using, writes them up, generates an image for each and emails the set over for approval.",
+    tools: ["n8n", "Apify", "OpenAI", "Google Drive", "Gmail"],
+    slug: "music-sports-generator",
+  },
+  {
+    title: "Smart Email Campaign Manager",
+    blurb:
+      "Follow-ups branch on what each lead actually did — clicked, opened, or nothing — with Supabase tracking every lead's position in the sequence. Replies are caught within 15 minutes, stop the sequence and ping the team on Slack.",
+    tools: ["n8n", "Supabase", "OpenAI", "Gmail", "Slack"],
+    slug: "email-campaign-manager",
+  },
+  {
+    title: "AI PDF to Google Slides Converter",
+    blurb:
+      "Send a PDF to a Telegram bot and get a formatted Google Slides deck back in the same chat. Long reports are split into chunks and processed in parallel, so length barely costs time.",
+    tools: ["Telegram", "n8n", "OpenAI", "Google Slides API"],
+    slug: "pdf-to-slides",
+  },
+  {
+    title: "AI Invoice PDF to Excel Comparison Tool",
+    blurb:
+      "Reads a batch of invoices in any supplier's layout and returns one Excel file grouped by supplier. Because the model reads each invoice the way a person would, a new supplier needs no setup at all.",
+    tools: ["n8n", "Claude Sonnet 4", "PDF extraction", "Excel"],
+    slug: "invoice-to-excel",
+  },
+  {
+    title: "WorkshopPOS",
+    blurb:
+      "Multi-tenant point-of-sale and job-card system for car workshops, following a car from check-in to printed receipt. Row-level security per workshop, amounts stored in whole paisa, invoice numbers that never repeat, and thermal printing over Web Serial.",
+    tools: ["Next.js", "React", "TypeScript", "Supabase", "PostgreSQL", "Tailwind"],
+    slug: "workshop-pos",
+  },
+  {
+    title: "Social Media Data Stack",
+    blurb:
+      "Lead architect on a modern stack pulling every social platform into BigQuery on a schedule and modelling it in dbt, so a view or a follower means the same thing everywhere. Manual collection time dropped 95%.",
+    tools: ["Airbyte", "Fivetran", "BigQuery", "dbt", "Tableau"],
+    slug: "social-data-stack",
+  },
+  {
+    title: "Ecommerce RFM Dashboard",
+    blurb:
+      "Scores 693 customers on recency, frequency and spend, then sorts them into 11 segments from Champions to Lost. Flagged roughly $50k of revenue at risk of churning and showed Champions alone driving about 185k in sales.",
+    tools: ["Tableau", "RFM segmentation", "Data preparation"],
+    slug: "rfm-dashboard",
+  },
+];
+
 export const skillGroups: SkillGroup[] = [
   {
     name: "Languages",
